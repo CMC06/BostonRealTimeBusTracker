@@ -16,3 +16,7 @@ body {
   padding: 10px;
 }
 
+#busIcon {
+  width: 22px;
+  border-radius: 50%;
+}
