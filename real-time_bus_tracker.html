@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+  <link href="bus_tracker.css" rel="stylesheet">
+  <script src="bus_tracker.js" async></script>
+  <title>Boston Bus Tracker Route 1</title>
+</head>
+<body>
+  <div id="map">
+    <img src="bus icon.png" alt="busIcon" id="busIcon" width="20px">
+  </div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY3J6eWNoZWxjIiwiYSI6ImNrb2s1bGxwMTFtZzQydnB3aDZqdWlmMmQifQ.PR6AT__InnZkFLy8BhlBFg';
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.104081, 42.36554],
+      zoom: 12
+    });
+
+    var marker = new mapboxgl.Marker({
+      element: document.getElementById('busIcon')
+    })
+     .setLngLat([-71.092761, 42.357575])
+     .addTo(map);
+
+  </script>
+ 
+</body>
+</html>
+<!--bus icon from: https://www.pngfind.com/mpng/hmJhox_school-bus-front-comments-bus-icon-png-transparent/ -->
