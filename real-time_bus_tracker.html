@@ -9,11 +9,14 @@
   <script src="bus_tracker.js" async></script>
   <title>Boston Bus Tracker Route 1</title>
 </head>
-<body>
-  <div id="map">
-    <img src="bus icon.png" alt="busIcon" id="busIcon" >
+<body id="body">
+  <div id="map"></div>
+  <div id="markers"></div>
+  <div class="headlineBox">
+    <h1>MBTA Bus Route 1 Realtime Tracker</h1>
   </div>
   <script>
+    //renders map in browser
     mapboxgl.accessToken = 'pk.eyJ1IjoiY3J6eWNoZWxjIiwiYSI6ImNrb2s1bGxwMTFtZzQydnB3aDZqdWlmMmQifQ.PR6AT__InnZkFLy8BhlBFg';
 
     var map = new mapboxgl.Map({
@@ -22,15 +25,15 @@
       center: [-71.08999647493374, 42.351838835631156], 
       zoom: 13.5
     });
-
-    var marker = new mapboxgl.Marker({
-      element: document.getElementById('busIcon')
-    })
-     .setLngLat([-71.092761, 42.357575])
-     .addTo(map);
-    
-    
-
+    //sets marker on map
+    // var marker = new mapboxgl.Marker({
+    //   //customizes marker icon to image of bus
+    //   element: document.getElementById('busIcon')
+    // })
+    //  .setLngLat([-71.092761, 42.357575])
+    //  .addTo(map);
+        
+    //adds bus route line to map
     map.on('load', function () {
       map.addSource('route', {
         'type': 'geojson',
@@ -79,6 +82,7 @@
           }
         }
       });
+      //styles bus route line
       map.addLayer({
         'id': 'route',
         'type': 'line',
