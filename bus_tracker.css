@@ -5,7 +5,7 @@ body {
 
 #map { 
   position: absolute; 
-  top: 0; 
+  top: 80px; 
   bottom: 0; 
   width: 100%; 
 }
@@ -16,7 +16,25 @@ body {
   padding: 10px;
 }
 
-#busIcon {
-  width: 22px;
+
+.marker {
+  background-image: url('busIcon.png');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.headlineBox {
+  background-color: #e4e1e1;
+  border-style: groove;
+  border-width: 2px;
+  border-color: black;
+  height: 75px;
+}
+
+h1{
+  color: #992600;
+  text-align: center;
 }
