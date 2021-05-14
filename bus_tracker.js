@@ -20,9 +20,7 @@ async function markers() {
       i++;
       console.log(markerEl);
   });
-  
-  console.log(markArray);
-
+    
 }
 markers();
 
@@ -40,21 +38,18 @@ function moveMarkers(locations) {
   for(let i = 0; i < markArray.length; i++){
     markArray[i].setLngLat(locations[i]);
   }
-  console.log(markArray);
 }
 
 async function run(){
   // get bus data    
   const locations = await getBusLocations();
-  //console.log(new Date());
+  //console.log(new Date()); //optional to determine if feed is working
   //console.log(locations);
   checkForNewBuses(locations);
   
   //calls function that loops through locations and sets markers based on current bus locations
   moveMarkers(locations);
   
-  //marker.setLngLat(locations[0]); //used when only tracking 1 bus
-
   // timer for marker animation, update/move ever 15 seconds
   setTimeout(run, 15000);
 }
