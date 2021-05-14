@@ -1,3 +1,8 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 body { 
   margin: 0; 
   padding: 0; 
@@ -27,11 +32,14 @@ body {
 }
 
 .headlineBox {
+  display: flex;
   background-color: #e4e1e1;
   border-style: groove;
   border-width: 2px;
   border-color: black;
   height: 75px;
+  justify-content: center;
+  align-items: center;
 }
 
 h1{
@@ -41,12 +49,14 @@ h1{
 
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 4.5vw;
+    font-size: 5vw;
   }
-}
 
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 4.5vw;
+  .headlineBox {
+    height: 50px;
+  }
+
+  #map {
+    top: 55px;
   }
 }
