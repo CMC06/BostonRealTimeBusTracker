@@ -38,3 +38,15 @@ h1{
   color: #992600;
   text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 4.5vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 4.5vw;
+  }
+}
