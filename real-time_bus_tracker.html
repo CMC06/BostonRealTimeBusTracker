@@ -20,19 +20,23 @@
     //renders map in browser
     mapboxgl.accessToken = 'pk.eyJ1IjoiY3J6eWNoZWxjIiwiYSI6ImNrb2s1bGxwMTFtZzQydnB3aDZqdWlmMmQifQ.PR6AT__InnZkFLy8BhlBFg';
 
+    if(window.innerWidth > 600){
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-71.08999647493374, 42.351838835631156], 
       zoom: 13.5
-    });
-    //sets marker on map
-    // var marker = new mapboxgl.Marker({
-    //   //customizes marker icon to image of bus
-    //   element: document.getElementById('busIcon')
-    // })
-    //  .setLngLat([-71.092761, 42.357575])
-    //  .addTo(map);
+      });
+    }
+    
+    if(window.innerWidth <= 600){
+      var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.08999647493374, 42.351838835631156], 
+      zoom: 12
+      });
+    }
         
     //adds bus route line to map
     map.on('load', function () {
