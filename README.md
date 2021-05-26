@@ -1,6 +1,16 @@
 # Realtime Boston Bus Tracking
 This program renders a map with animation that tracks Boston public transit buses based on their publicly available location information. It was created as part of an academic project for an MIT online certificate program. 
 
+## How to Run
+This program runs in the web browser and is compatible with mobile phones.
+
+## Future Improvements:
+<li>Add fixed pins indicating bus stop locations</li>
+<li>Add bus direction indicator</li>
+<li>Add popup information about fullness of bus</li>
+<li>Add additional MBTA bus lines and allow client to filter/select which line(s) they wish to track </li>
+<li>Add a pin indicating location of user if on mobile device with location services enabled</li>
+
 ## License
 MIT License
 
